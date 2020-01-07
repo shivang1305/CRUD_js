@@ -1,0 +1,26 @@
+<h2>{{viewTitle}}</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>City</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.fullname}}</td>
+            <td>{{this.phonenumber}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.password}}</td>
+            <td>{{this.city}}</td>
+            <td><a href="{{this.id}}">Edit</a>
+            <a href="delete/{{this.id}}">Delete</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
